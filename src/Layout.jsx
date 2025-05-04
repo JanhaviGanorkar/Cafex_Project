@@ -1,15 +1,13 @@
 // Layout.jsx - Main layout component for the application
-import { Link, Outlet } from 'react-router-dom';
-import Footer from './component/Footer/Footer';
 import Navbar from './component/Navbar/Navbar';
+import Footer from './component/Footer/Footer';
 
-
-export default function Layout() {
+export default function Layout({ children }) {
   return (
-      <>
+    <>
       <Navbar/>
-      <main style={{ padding: '2rem', minHeight: 'calc(100vh - 160px)' }}>
-        <Outlet />
+      <main className="min-h-screen pt-0">
+        {children}
       </main>
       <Footer /> 
     </>

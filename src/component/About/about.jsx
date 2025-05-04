@@ -2,12 +2,13 @@
 import aboutImg from "@/assets/img/about.png";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export default function About() {
   return (
     <section
       id="about"
-      className="grid md:grid-cols-2 items-center gap-12 px-6 py-20 bg-black text-white"
+className="min-h-screen grid md:grid-cols-2 items-center gap-12 px-6 py-20 bg-black text-white"
     >
       <div className="w-full max-w-md mx-auto">
         <img src={aboutImg} alt="About" className="w-full h-auto" />
@@ -27,12 +28,14 @@ export default function About() {
           hunter-gatherer cultures in warm climates, with the Hadza people ranking
           honey as their favorite food.
         </p>
-        <Button
-          variant="secondary"
-          className="rounded-full px-6 py-4 text-orange-400 bg-gray-900 hover:bg-orange-400 hover:text-black transition"
-        >
-          Explore Story <ArrowRight className="ml-2" size={18} />
-        </Button>
+        <Link to="/login">
+          <Button
+            variant="secondary"
+            className="rounded-full px-6 py-4 text-orange-400 bg-gray-900 hover:bg-orange-400 hover:text-black transition"
+          >
+            Admin Login <ArrowRight className="ml-2" size={18} />
+          </Button>
+        </Link>
       </div>
     </section>
   );
